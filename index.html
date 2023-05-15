@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
     />
-
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <!-- ======== StyleSheet ======= -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Travel Website</title>
@@ -51,7 +51,7 @@
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact</a>
-            </li>
+            </li> 
           </ul>
 
           <a href="#" class="btn sign-up">Sign Up</a>
@@ -106,9 +106,12 @@
           Get Ready for <br />
           Lifetime Journey
         </h1> 
-        <i class="swiper-prev bx bx-chevron-left swiper-icon"></i> 
-        <a href="#" class="btn">Get Started</a>
-        <i class="swiper-next bx bx-chevron-right swiper-icon"></i>
+        <div class="dark">
+          <i class="swiper-prev bx bx-chevron-left swiper-icon"></i> 
+          <i class='ic bx bxs-brightness bx-spin bx-border-circle bx-md' id="dark"></i>
+          <i class="swiper-next bx bx-chevron-right swiper-icon"></i>
+        </div>
+
       </div>
     </header>
 
@@ -375,7 +378,22 @@
         </div>
       </div>
     </footer>
-
+    <script defer>
+      const content = document.querySelector('body');
+      const darkMode = document.getElementById('dark'); 
+      darkMode.addEventListener('click', function(){
+        this.classList.toggle('bxs-moon');
+     if(this.classList.toggle('bxs-brightness')){
+      body.style.background = 'white'; 
+      body.style.color='black';
+      body.style.transition ='2s';
+     }else{
+      body.style.background = 'black'; 
+      body.style.color='white';
+      body.style.transition ='2s';
+     }
+      })
+    </script>
     <!-- ======== SwiperJS ======= -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.js"></script>
     <!-- ======== SCROLL REVEAL ======= -->

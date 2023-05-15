@@ -105,6 +105,10 @@ video {
 
 /* =========== Navigation ============ */
 
+.ic{
+ cursor: pointer;
+ transform: translate(-50%,-50);
+} 
 .header {
   position: relative;
   width: 100%;
@@ -278,19 +282,19 @@ video {
 }
 
 .header .swiper-icon {
-  font-size: 7rem;
+  font-size: 5rem;
 }
-
+.header .swiper-next{
+  padding-left: 25%;
+}
+.header .swiper-prev{
+  padding-right: 35%;
+}
 .header .swiper-next,
 .header .swiper-prev {
   justify-content: center;
-  /* background-color: var(--primary); */
   color: var(--white);
-  /* width: 10rem;
-  height: 5rem; */
   cursor: pointer;
-  padding-left: 1%;
-  padding-right: 1%;
 }
 
 .header .swiper-next.swiper-button-disabled,
@@ -299,9 +303,9 @@ video {
   cursor: default;
 }
 
-.header .swiper-prev {
+/* .header .swiper-prev {
   margin-right: 2rem;
-}
+} */
 
 @media (max-width: 996px) {
   .header .content h1 {
